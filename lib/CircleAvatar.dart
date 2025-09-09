@@ -56,11 +56,14 @@ class DashBordScreen extends StatelessWidget {
         backgroundColor: Colors.blue,
       ),
       body: Center(
-        child: Container(
+         child: Container(
           height: 300,
           width: 300,
           decoration: BoxDecoration(
-            border: Border.all(color: Colors.blue, width: 4),
+            border: Border.all(
+              color: Colors.blue,
+              width: 4,
+            ),
             borderRadius: BorderRadius.circular(150),
             boxShadow: [
               BoxShadow(
@@ -76,7 +79,7 @@ class DashBordScreen extends StatelessWidget {
             backgroundImage: AssetImage('assets/images/user.jpg'),
             backgroundColor: Colors.transparent,
             child: Align(
-              alignment: Alignment(0, 0.8),
+              alignment: Alignment( 0, 0.8,), 
               child: Text(
                 "Md Manik Hossain",
                 style: TextStyle(
@@ -87,7 +90,7 @@ class DashBordScreen extends StatelessWidget {
               ),
             ),
           ),
-        ),
+         )
       ),
     );
   }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newproject/uihelper/util.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,7 +11,22 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "Md Manik Hossain",
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(primarySwatch: Colors.blue),
+      theme: ThemeData(
+        primarySwatch: Colors.green,
+        textTheme: const TextTheme(
+          headlineLarge: TextStyle(
+            fontSize: 21,
+            fontWeight: FontWeight.w500,
+            color: Colors.black,
+            fontStyle: FontStyle.italic,
+          ),
+          titleMedium: TextStyle(
+            fontSize: 15,
+            fontWeight: FontWeight.w300,
+            color: Colors.grey,
+          ),
+        ),
+      ),
       home: DashBordScreen(),
     );
   }
@@ -55,42 +71,32 @@ class DashBordScreen extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.blue,
       ),
-      body: Center(
-         child: Container(
-          height: 300,
-          width: 300,
-          decoration: BoxDecoration(
-            border: Border.all(
-              color: Colors.blue,
-              width: 4,
+      body: Container(
+        padding: const EdgeInsets.all(10),
+        child: Column(
+          children: [
+            Text(
+              "Circle Avatar",
+              style: Theme.of(context).textTheme.headlineLarge!.copyWith(
+                    color: Colors.blue,
+                  ),
             ),
-            borderRadius: BorderRadius.circular(150),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.grey.withOpacity(0.5),
-                spreadRadius: 5,
-                blurRadius: 7,
-                offset: Offset(0, 3), // changes position of shadow
-              ),
-            ],
-          ),
-          child: CircleAvatar(
-            radius: 100,
-            backgroundImage: AssetImage('assets/images/user.jpg'),
-            backgroundColor: Colors.transparent,
-            child: Align(
-              alignment: Alignment( 0, 0.8,), 
-              child: Text(
-                "Md Manik Hossain",
-                style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.w700,
-                  fontSize: 16,
-                ),
-              ),
+            Text(
+              "sub Circle Avatar",
+              style: Theme.of(context).textTheme.titleMedium,
             ),
-          ),
-         )
+            Text(
+              "Circle Avatar",
+              style: Theme.of(context).textTheme.headlineLarge!.copyWith(
+                    color: Colors.orange,
+                  ),
+            ),
+            Text(
+              "sub Circle Avatar",
+              style: mtextStyle33(),
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -33,14 +33,41 @@ class DashBordScreen extends StatelessWidget {
         backgroundColor: Colors.blue,
       ),
       body: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-           Container(width: 100, height: 100, color: Colors.blue.  shade50),
-           Expanded(
-            child:Container(width: 100, height: 100, color: Colors.blue.  shade100),
-           ), 
-           Container(width: 100, height: 100, color: Colors.yellow.shade500,)
-          ],
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          Expanded(
+            flex:3,
+            child: Container(
+              width: 100,
+              height: 100,
+              color: Colors.blue.shade50,
+            ),
+          ),
+          Expanded(
+            flex: 5,
+            child: Container(
+              width: 100,
+              height: 100,
+              color: Colors.blue.shade100,
+            ),
+          ),
+          Expanded(
+            flex: 3,
+            child: Container(
+              width: 100,
+              height: 100,
+              color: Colors.blue.shade200,
+            ),
+          ),
+          Expanded(
+            flex: 2,
+            child: Container(
+              width: 100,
+              height: 100,
+              color: const Color.fromARGB(255, 62, 159, 238),
+            ),
+          ),
+        ],
       ),
     );
   }

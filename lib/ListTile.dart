@@ -18,8 +18,28 @@ class MyApp extends StatelessWidget {
 class DashBordScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-
-  var arrData  = ["manik", "hossain", "fiver", "flutter", "developer", "app", "web", "software",   "engineer", "mobile", "designer", "freelancer", "blogger", "youtuber", "programmer", "coder", "enthusiast", "learner", "teacher", "mentor",];
+    var arrData = [
+      "manik",
+      "hossain",
+      "fiver",
+      "flutter",
+      "developer",
+      "app",
+      "web",
+      "software",
+      "engineer",
+      "mobile",
+      "designer",
+      "freelancer",
+      "blogger",
+      "youtuber",
+      "programmer",
+      "coder",
+      "enthusiast",
+      "learner",
+      "teacher",
+      "mentor",
+    ];
 
     // TODO: implement build
     return Scaffold(
@@ -40,18 +60,24 @@ class DashBordScreen extends StatelessWidget {
           return ListTile(
             leading: CircleAvatar(
               backgroundColor: Colors.blue,
-              child: Text("${arrData[index].toString().substring(0, 1).toUpperCase()}"),
+              child: Text(
+                "${arrData[index].toString().substring(0, 1).toUpperCase()}",
+              ),
             ),
             title: Text(arrData[index]),
             subtitle: Text("This is subtitle"),
-            trailing: Icon(Icons.arrow_forward_ios, size: 16, color: Colors.blue,),
+            trailing: Icon(
+              Icons.arrow_forward_ios,
+              size: 16,
+              color: Colors.blue,
+            ),
           );
         },
         separatorBuilder: (context, index) {
           return Divider(height: 30, thickness: 2);
         },
         itemCount: arrData.length,
-      )
+      ),
     );
   }
 }

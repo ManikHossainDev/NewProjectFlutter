@@ -35,22 +35,8 @@ class DashBordScreen extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.blue,
       ),
-      body: ListView.separated(
-        itemBuilder: (context, index) {
-          return ListTile(
-            leading: CircleAvatar(
-              backgroundColor: Colors.blue,
-              child: Text("${arrData[index].toString().substring(0, 1).toUpperCase()}"),
-            ),
-            title: Text(arrData[index]),
-            subtitle: Text("This is subtitle"),
-            trailing: Icon(Icons.arrow_forward_ios, size: 16, color: Colors.blue,),
-          );
-        },
-        separatorBuilder: (context, index) {
-          return Divider(height: 30, thickness: 2);
-        },
-        itemCount: arrData.length,
+      body: Container(
+        // manik
       )
     );
   }

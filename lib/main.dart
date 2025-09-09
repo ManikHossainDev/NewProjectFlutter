@@ -32,13 +32,50 @@ class DashBordScreen extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.blue,
       ),
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
+      // body: Row(
+      //   mainAxisAlignment: MainAxisAlignment.spaceAround,
+      //   children: [
+      //     Expanded(
+      //       flex:3,
+      //       child: Container(
+      //         width: 100,
+      //         height: 100,
+      //         color: Colors.blue.shade50,
+      //       ),
+      //     ),
+      //     Expanded(
+      //       flex: 5,
+      //       child: Container(
+      //         width: 100,
+      //         height: 100,
+      //         color: Colors.blue.shade100,
+      //       ),
+      //     ),
+      //     Expanded(
+      //       flex: 3,
+      //       child: Container(
+      //         width: 100,
+      //         height: 100,
+      //         color: Colors.blue.shade200,
+      //       ),
+      //     ),
+      //     Expanded(
+      //       flex: 2,
+      //       child: Container(
+      //         width: 100,
+      //         height: 100,
+      //         color: const Color.fromARGB(255, 62, 159, 238),
+      //       ),
+      //     ),
+      //   ],
+      // ),
+      body: Column(
+        // mainAxisAlignment: MainAxisAlignment.center,
+        // crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           Expanded(
-            flex:3,
+            flex: 3,
             child: Container(
-              width: 100,
               height: 100,
               color: Colors.blue.shade50,
             ),
@@ -46,7 +83,6 @@ class DashBordScreen extends StatelessWidget {
           Expanded(
             flex: 5,
             child: Container(
-              width: 100,
               height: 100,
               color: Colors.blue.shade100,
             ),
@@ -54,7 +90,6 @@ class DashBordScreen extends StatelessWidget {
           Expanded(
             flex: 3,
             child: Container(
-              width: 100,
               height: 100,
               color: Colors.blue.shade200,
             ),
@@ -62,7 +97,6 @@ class DashBordScreen extends StatelessWidget {
           Expanded(
             flex: 2,
             child: Container(
-              width: 100,
               height: 100,
               color: const Color.fromARGB(255, 62, 159, 238),
             ),

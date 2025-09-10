@@ -17,6 +17,8 @@ class MyApp extends StatelessWidget {
 }
 
 class DashBordScreen extends StatelessWidget {
+  var emailText = TextEditingController();
+  var passwordText = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,13 +41,15 @@ class DashBordScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-
               // 🔹 Normal Enabled TextField
               TextField(
+                controller: emailText,
+                keyboardType: TextInputType.emailAddress,
                 decoration: InputDecoration(
                   labelText: "Enabled Field",
                   hintText: "Type here",
                   suffixText: "Ok",
+                  prefixIcon: Icon(Icons.person, color: Colors.blue),
                   suffixIcon: Icon(Icons.check_circle, color: Colors.green),
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(11),
@@ -88,6 +92,10 @@ class DashBordScreen extends StatelessWidget {
 
               // 🔹 Focused / Editable TextField
               TextField(
+                controller: passwordText,
+                obscureText: true,
+                obscuringCharacter: "*",
+                keyboardType: TextInputType.visiblePassword,
                 decoration: InputDecoration(
                   labelText: "Focused Border",
                   suffixIcon: Icon(Icons.remove_red_eye, color: Colors.orange),
@@ -100,10 +108,7 @@ class DashBordScreen extends StatelessWidget {
                   ),
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(11),
-                    borderSide: const BorderSide(
-                      color: Colors.grey,
-                      width: 2,
-                    ),
+                    borderSide: const BorderSide(color: Colors.grey, width: 2),
                   ),
                 ),
               ),
@@ -118,10 +123,7 @@ class DashBordScreen extends StatelessWidget {
                   suffixIcon: Icon(Icons.error, color: Colors.red),
                   errorBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(11),
-                    borderSide: const BorderSide(
-                      color: Colors.red,
-                      width: 2,
-                    ),
+                    borderSide: const BorderSide(color: Colors.red, width: 2),
                   ),
                   focusedErrorBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(11),
@@ -133,6 +135,14 @@ class DashBordScreen extends StatelessWidget {
                 ),
               ),
 
+              ElevatedButton(
+                onPressed: () {
+                  String email = emailText.text.toString();
+                  String password = passwordText.text.toString();
+                  print("Email: $email, Password: $password");
+                },
+                child: Text("Submit"),
+              ),
             ],
           ),
         ),

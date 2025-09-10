@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:newproject/uihelper/util.dart';
-
 void main() {
   runApp(MyApp());
 }
@@ -11,22 +9,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "Md Manik Hossain",
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.green,
-        textTheme: const TextTheme(
-          headlineLarge: TextStyle(
-            fontSize: 21,
-            fontWeight: FontWeight.w500,
-            color: Colors.black,
-            fontStyle: FontStyle.italic,
-          ),
-          titleMedium: TextStyle(
-            fontSize: 15,
-            fontWeight: FontWeight.w300,
-            color: Colors.grey,
-          ),
-        ),
-      ),
+      theme: ThemeData(primarySwatch: Colors.blue),
       home: DashBordScreen(),
     );
   }
@@ -35,29 +18,6 @@ class MyApp extends StatelessWidget {
 class DashBordScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var arrData = [
-      "manik",
-      "hossain",
-      "fiver",
-      "flutter",
-      "developer",
-      "app",
-      "web",
-      "software",
-      "engineer",
-      "mobile",
-      "designer",
-      "freelancer",
-      "blogger",
-      "youtuber",
-      "programmer",
-      "coder",
-      "enthusiast",
-      "learner",
-      "teacher",
-      "mentor",
-    ];
-
     return Scaffold(
       appBar: AppBar(
         title: const Text(
@@ -71,33 +31,53 @@ class DashBordScreen extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.blue,
       ),
-      body: Container(
-        padding: const EdgeInsets.all(10),
-        child: Column(
-          children: [
-            Text(
-              "Circle Avatar",
-              style: Theme.of(context).textTheme.headlineLarge!.copyWith(
-                    color: Colors.blue,
-                  ),
-            ),
-            Text(
-              "sub Circle Avatar",
-              style: Theme.of(context).textTheme.titleMedium,
-            ),
-            Text(
-              "Circle Avatar",
-              style: Theme.of(context).textTheme.headlineLarge!.copyWith(
-                    color: Colors.orange,
-                  ),
-            ),
-            Text(
-              "sub Circle Avatar",
-              style: mtextStyle33(),
-            ),
-          ],
+      body: Center(
+        child: Container(
+          width: 300,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+               TextField(
+                 decoration: InputDecoration(
+                   focusedBorder: OutlineInputBorder(
+                     borderRadius: BorderRadius.circular(11),
+                     borderSide: const BorderSide(
+                       color: Colors.deepOrange,
+                       width: 2,
+                     ),
+                   ),
+                   enabledBorder: OutlineInputBorder(   // ✅ fixed typo here
+                     borderRadius: BorderRadius.circular(11),
+                     borderSide: const BorderSide(
+                       color: Colors.blueAccent,
+                       width: 2,
+                     ),
+                   ),
+                 ),
+              ),
+              Container(height: 11,),
+              TextField(
+                decoration: InputDecoration(
+                    focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(11),
+                        borderSide: BorderSide(
+                            color: Colors.orangeAccent,
+                            width: 2,
+                        )
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(11),
+                        borderSide: BorderSide(
+                          color: Colors.blueAccent,
+                          width: 2,
+                        )
+                    )
+                ),
+              ),
+            ],
+          ),
         ),
-      ),
+      )
     );
   }
 }

@@ -37,7 +37,7 @@ class DashBordScreen extends StatelessWidget {
       body: Container(
         width: 300,
         height: 300,
-        child:  Stack(
+        child: Stack(
           children: [
             Container(width: 200, height: 200, color: Colors.amber),
             Positioned(
@@ -51,7 +51,7 @@ class DashBordScreen extends StatelessWidget {
             ),
           ],
         ),
-      )
+      ),
     );
   }
 }

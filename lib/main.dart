@@ -19,26 +19,7 @@ class MyApp extends StatelessWidget {
 }
 
 class DashBordScreen extends StatelessWidget {
-  final arrColors = [
-    Colors.red,
-    Colors.green,
-    Colors.blue,
-    Colors.orange,
-    Colors.purple,
-    Colors.brown,
-    Colors.cyan,
-    Colors.indigo,
-    Colors.teal,
-    Colors.amber,
-    Colors.deepOrange,
-    Colors.lightGreen,
-    Colors.lime,
-    Colors.pink,
-    Colors.deepPurple,
-    Colors.yellow,
-    Colors.grey,
-    Colors.blueGrey,
-  ];
+ 
   
   callBack(){
     print("Clicked button");

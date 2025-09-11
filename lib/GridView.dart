@@ -57,21 +57,34 @@ class DashBordScreen extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.blue,
       ),
-      body: GridView.builder(
-        itemBuilder: (context, index) {
-          return Container(color: arrColors[index]);
-        }, 
-        itemCount: arrColors.length,
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 3,
-          crossAxisSpacing: 4,
-          mainAxisSpacing: 4,
-        ),
-        // gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-        //   maxCrossAxisExtent: 100,
-        //   crossAxisSpacing: 4,
-        //   mainAxisSpacing: 4,
-        // )
+      body: Column(
+        children: [
+          // First GridView (Expanded)
+          Expanded(
+            child: GridView.count(
+              crossAxisCount: 5,
+              crossAxisSpacing: 10,
+              mainAxisSpacing: 10,
+              children: List.generate(10, (index) {
+                return Container(color: arrColors[index]);
+              }),
+            ),
+          ),
+
+          Container(height: 5),
+
+          // Second GridView (Expanded)
+          Expanded(
+            child: GridView.extent(
+              maxCrossAxisExtent: 100,
+              crossAxisSpacing: 10,
+              mainAxisSpacing: 10,
+              children: List.generate(10, (index) {
+                return Container(color: arrColors[index]);
+              }),
+            ),
+          ),
+        ],
       ),
     );
   }

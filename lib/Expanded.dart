@@ -5,6 +5,8 @@ void main() {
 }
 
 class Expandeds extends StatelessWidget {
+  const Expandeds({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -16,6 +18,8 @@ class Expandeds extends StatelessWidget {
 }
 
 class DashBordScreen extends StatelessWidget {
+  const DashBordScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build

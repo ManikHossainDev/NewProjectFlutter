@@ -60,7 +60,7 @@ class DashBordScreen extends StatelessWidget {
       body: GridView.builder(
         itemBuilder: (context, index) {
           return Container(color: arrColors[index]);
-        }, 
+        },
         itemCount: arrColors.length,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 3,

@@ -5,6 +5,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -16,6 +18,8 @@ class MyApp extends StatelessWidget {
 }
 
 class DashBordScreen extends StatelessWidget {
+  const DashBordScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     var arrData = [
@@ -61,7 +65,7 @@ class DashBordScreen extends StatelessWidget {
             leading: CircleAvatar(
               backgroundColor: Colors.blue,
               child: Text(
-                "${arrData[index].toString().substring(0, 1).toUpperCase()}",
+                arrData[index].toString().substring(0, 1).toUpperCase(),
               ),
             ),
             title: Text(arrData[index]),

@@ -53,7 +53,30 @@ class _DashBordScreenState extends State<DashBordScreen> {
         centerTitle: true,
         backgroundColor: Colors.blue,
       ),
-      body: Center(),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              "Current Time",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+            ),
+            SizedBox(height: 10),
+            Text(
+              "${time.day}-${time.month}-${time.year}",
+              style: TextStyle(fontSize: 40, fontWeight: FontWeight.w500),
+            ),
+            Text(
+              "${time.hour.toString().padLeft(2, '0')}:${time.minute.toString().padLeft(2, '0')}:${time.second.toString().padLeft(2, '0')}",
+              style: TextStyle(
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+                color: Colors.blue,
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

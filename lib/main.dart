@@ -32,39 +32,9 @@ class DashBordScreen extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.blue,
       ),
-      body: Column(
-        children: [
-          Text("Selected Date", style: TextStyle(fontSize: 25)),
-          ElevatedButton(
-            child: Text("Date Picker"),
-            onPressed: () async {
-              DateTime? dataPicked = await showDatePicker(
-                context: context,
-                initialDate: DateTime.now(),
-                firstDate: DateTime(2020),
-                lastDate: DateTime(2030),
-              );
-              if (dataPicked != null) {
-                print('Date Selected: $dataPicked');
-              }
-            },
-          ),
-
-          ElevatedButton(
-            onPressed: () async {
-              TimeOfDay ? timePicked =  await showTimePicker(
-                context: context,
-                initialTime: TimeOfDay.now(),
-                initialEntryMode: TimePickerEntryMode.input,
-              );
-              if (timePicked != null) {
-                print('Time Selected: $timePicked.hour : $timePicked.minute');
-              }
-            },
-            child: Text("Time Picker"),
-          ),
-        ],
-      ),
+      body: Container(
+        
+      )
     );
   }
 }

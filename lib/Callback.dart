@@ -39,8 +39,8 @@ class DashBordScreen extends StatelessWidget {
     Colors.grey,
     Colors.blueGrey,
   ];
-  
-  callBack(){
+
+  callBack() {
     print("Clicked button");
   }
 
@@ -59,10 +59,7 @@ class DashBordScreen extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.blue,
       ),
-      body: ElevatedButton(
-        child: Text("Click Me"),
-        onPressed: callBack,
-      ),
+      body: ElevatedButton(child: Text("Click Me"), onPressed: callBack),
     );
   }
 }

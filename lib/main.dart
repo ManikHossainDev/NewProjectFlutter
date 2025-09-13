@@ -34,22 +34,11 @@ class DashBordScreen extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.blue,
       ),
-      body: ConstrainedBox(
-        constraints: BoxConstraints(
-          minWidth: 200,
-          minHeight: 40,
-          maxHeight: 80,
-          maxWidth: 400,
-        ),
-        
-          child: SizedBox.shrink(
-            child: ElevatedButton(
-              onPressed: () {
-                print("button click");
-              },
-              child: Text("click now"),
-            ),
-          ),
+      body: Row(
+        children: [
+          Text("how are you", style: TextStyle(fontSize: 16, color: Colors.blue, fontWeight: FontWeight.w300),),
+          Text("World", style: TextStyle( fontSize:34, color:Colors.green, fontWeight: FontWeight.w400),)
+          ]
         ),
     );
   }

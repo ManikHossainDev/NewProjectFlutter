@@ -41,16 +41,16 @@ class DashBordScreen extends StatelessWidget {
           maxHeight: 80,
           maxWidth: 400,
         ),
-        
-          child: SizedBox.shrink(
-            child: ElevatedButton(
-              onPressed: () {
-                print("button click");
-              },
-              child: Text("click now"),
-            ),
+
+        child: SizedBox.shrink(
+          child: ElevatedButton(
+            onPressed: () {
+              print("button click");
+            },
+            child: Text("click now"),
           ),
         ),
+      ),
     );
   }
 }

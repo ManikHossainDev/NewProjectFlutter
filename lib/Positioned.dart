@@ -35,8 +35,26 @@ class DashBordScreen extends StatelessWidget {
         backgroundColor: Colors.blue,
       ),
       body: Container(
-        
-       ),
+        width: double.infinity,
+        height: double.infinity,
+        color: const Color.fromARGB(255, 145, 189, 240),
+        child: Stack(
+          children: [
+            Positioned(
+              bottom: 11,
+              right: 11,
+              child: Container(
+                width: 100,
+                height: 100,
+                decoration: BoxDecoration(
+                  color: Colors.cyan,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

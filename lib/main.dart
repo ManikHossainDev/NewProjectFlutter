@@ -35,48 +35,7 @@ class DashBordScreen extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.blue,
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Container(
-            child: Container(
-              width: 150,
-              height: 50,
-              child: RoundedButton(
-                btnName: "Pay",
-                icon: Icon(Icons.play_arrow),
-                callback: () => {print("data")},
-                textStyle: TextStyle(
-                  fontSize: 16,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-          ),
-
-
-          Container( height: 10),
-
-          Container(
-          child: Container(
-          width: 150,
-          height: 50,
-          child: RoundedButton(
-            btnName: "Buy",
-            icon: Icon(Icons.payment_outlined),
-            callback: () => {print("data")},
-            bgColor: Colors.amber,
-            textStyle: TextStyle(
-              fontSize: 16,
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-        ),
-        ),
-        ],
-      ),
+      body: Container()
     );
   }
 }

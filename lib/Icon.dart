@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -35,14 +35,8 @@ class DashBordScreen extends StatelessWidget {
         backgroundColor: Colors.blue,
       ),
       body: Center(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            Icon(Icons.add_business, size: 50, color: Colors.greenAccent),
-            
-            FaIcon(FontAwesomeIcons.amazon)
-
-          ],
+        child: Container(
+          child: Icon(Icons.add_business, size: 50, color: Colors.greenAccent),
         ),
       ),
     );

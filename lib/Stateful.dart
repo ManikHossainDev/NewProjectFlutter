@@ -107,12 +107,11 @@ class _DashBordScreenState extends State<DashBordScreen> {
                       ),
                       ElevatedButton(
                         onPressed: () {
-                          var no1 = int.parse(no1Controller.text.toString());
-                          var no2 = int.parse(no2Controller.text.toString());
+                          var no1 = int.parse(no1Controller.text.trim());
+                          var no2 = int.parse(no2Controller.text.trim());
 
-                          var diff = no1 / no2;
-
-                          result = "the difference of $no1 and $no2 is $diff";
+                          var div = no1 / no2;
+                          result = "The  of $no1 by $no2 is ${div.toStringAsFixed(2)}";
 
                           setState(() {});
                         },

@@ -44,8 +44,30 @@ class _DashBordScreenState extends State<DashBordScreen> {
         centerTitle: true,
         backgroundColor: Colors.blue,
       ),
-      body: Container(
+      body: ConstrainedBox(
 
+        constraints: BoxConstraints(
+          // maxHeight: 200
+          minHeight: 20,
+          minWidth: 300,
+          maxWidth: 350
+        ),
+         child: ElevatedButton(
+           style: ButtonStyle(
+             backgroundColor: WidgetStateProperty.all(Colors.blue), // Set the background color
+
+           ),
+           onPressed: () {},
+           child: Text("Click"),
+         ),
+
+        // child: Text(
+        //    'Manik Hossain ',
+        //   style: TextStyle(
+        //       fontSize: 21,
+        //       overflow: TextOverflow.fade
+        //   ),
+        // ),
       ),
     );
   }

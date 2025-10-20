@@ -1,8 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:newproject/Callback.dart';
+import 'package:newproject/main.dart';
 
 class IntroPage extends StatelessWidget {
+
+  var nameController =  TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,11 +33,14 @@ class IntroPage extends StatelessWidget {
             SizedBox(
               height: 11,
             ),
+            TextField(
+              controller: nameController,
+            ),
             ElevatedButton(onPressed: (){
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => DashBordScreen(),
+                  builder: (context) => DashBordScreens(nameController.text),
                 ),
               );
             }, child: Text("Next"))

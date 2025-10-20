@@ -5,7 +5,6 @@ import 'package:newproject/IntroSplash.dart';
 void main() {
   runApp(const MyApp());
 }
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
@@ -14,12 +13,17 @@ class MyApp extends StatelessWidget {
       title: "Md Manik Hossain",
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: IntroSplash(),
+      home: IntroPage(),
     );
   }
 }
 
-class DashBordScreen extends StatelessWidget {
+class DashBordScreens extends StatelessWidget {
+
+  var namefromHome ;
+
+  DashBordScreens(this.namefromHome);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,7 +38,26 @@ class DashBordScreen extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.blue,
       ),
-      body: Text("manik"),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text("Welcone,  $namefromHome",
+              style: TextStyle(
+                fontSize: 38,
+                color: Colors.green,
+                fontWeight: FontWeight.w700
+              ),
+            ),
+
+            ElevatedButton(onPressed:(){
+            }, child: Text("manik", style: TextStyle(
+                fontSize: 34,
+                fontWeight: FontWeight.w700,
+            ),),)
+          ],
+        )
+      ),
     );
   }
 }

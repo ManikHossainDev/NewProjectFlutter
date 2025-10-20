@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:newproject/IntroPage.dart';
+import 'package:newproject/IntroSplash.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
       title: "Md Manik Hossain",
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: IntroPage(),
+      home: IntroSplash(),
     );
   }
 }

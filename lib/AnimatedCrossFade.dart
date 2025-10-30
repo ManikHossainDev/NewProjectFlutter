@@ -54,8 +54,8 @@ class _AnimatedCrossFadeWidgetState extends State<AnimatedCrossFadeWidget> {
           ),
           secondChild: Image.asset(
             'assets/images/user.jpg',
-            width: 200,
-            height: 200,
+            width: 500,
+            height: 500,
           ),
           crossFadeState: _isFirstChild
               ? CrossFadeState.showFirst
